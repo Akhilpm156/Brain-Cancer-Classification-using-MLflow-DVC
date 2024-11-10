@@ -14,7 +14,7 @@ class PrepareBaseModel:
 
     
     def get_base_model(self):
-        self.model = tf.keras.applications.ResNet50(
+        self.model = tf.keras.applications.vgg16.VGG16(
             input_shape=self.config.params_image_size,
             weights=self.config.params_weights,
             include_top=self.config.params_include_top
@@ -43,12 +43,12 @@ class PrepareBaseModel:
             inputs=model.input,
             outputs=prediction
         )
-
-        full_model.compile(
-            optimizer=tf.keras.optimizers.SGD(learning_rate=learning_rate),
-            loss=tf.keras.losses.CategoricalCrossentropy(),
-            metrics=["accuracy"]
-        )
+        # complie need to do in the training components
+        #full_model.compile(
+        #    optimizer=tf.keras.optimizers.Adam(learning_rate=learning_rate),
+        #    loss=tf.keras.losses.CategoricalCrossentropy(),
+        #    metrics=["accuracy"]
+        #)
 
         full_model.summary()
         return full_model
