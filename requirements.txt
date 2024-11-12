@@ -1,7 +1,9 @@
 tensorflow==2.18.0
+keras==3.6.0
 pandas 
 gdown
 dvc
+dagshub
 mlflow==2.17.2
 notebook
 numpy
