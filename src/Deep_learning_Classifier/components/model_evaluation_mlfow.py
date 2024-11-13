@@ -2,7 +2,6 @@ import tensorflow as tf
 from pathlib import Path
 import mlflow
 import mlflow.keras
-import dagshub
 from urllib.parse import urlparse
 from Deep_learning_Classifier.entity.config_entity import EvaluationConfig
 from Deep_learning_Classifier.utils.helper import read_yaml, create_directories,save_json
@@ -54,10 +53,6 @@ class Evaluation:
 
     
     def log_into_mlflow(self):
-
-        dagshub.init(repo_owner='akhilpm156',
-             repo_name='Brain-Cancer-Classification-using-MLflow-DVC',
-             mlflow=True)
 
         mlflow.set_tracking_uri(self.config.mlflow_uri)
         mlflow.set_registry_uri(self.config.mlflow_uri)
