@@ -79,7 +79,7 @@ class ConfigurationManager:
 
     def get_evaluation_config(self) -> EvaluationConfig:
         eval_config = EvaluationConfig(
-            path_of_model="artifacts/training/model.h5",
+            path_of_model="model/model.h5",
             testing_data="artifacts/data_ingestion/Testing",
             mlflow_uri="https://dagshub.com/Akhilpm156/Brain-Cancer-Classification-using-MLflow-DVC.mlflow",
             all_params=self.params,
