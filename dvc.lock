@@ -74,7 +74,7 @@ stages:
       params.yaml:
         AUGMENTATION: true
         BATCH_SIZE: 32
-        EPOCHS: 2
+        EPOCHS: 15
         IMAGE_SIZE:
         - 224
         - 224
@@ -82,7 +82,7 @@ stages:
     outs:
     - path: model/model.h5
       hash: md5
-      md5: 1496dcf2ed9d281ffadeb9c9ddfbba7c
+      md5: 63d2277bc7328eb87f9850d63a61a1f9
       size: 60153320
   evaluation:
     cmd: python src/Deep_learning_Classifier/pipeline/stage_04_model_evaluation.py
@@ -98,7 +98,7 @@ stages:
       size: 573
     - path: model/model.h5
       hash: md5
-      md5: 1496dcf2ed9d281ffadeb9c9ddfbba7c
+      md5: 63d2277bc7328eb87f9850d63a61a1f9
       size: 60153320
     - path: src/Deep_learning_Classifier/pipeline/stage_04_model_evaluation.py
       hash: md5
@@ -114,5 +114,5 @@ stages:
     outs:
     - path: scores.json
       hash: md5
-      md5: eacc94d3eca2900380498e71f27ac52b
-      size: 73
+      md5: 4a819072b1d19f0549b8120c58a57934
+      size: 72
