@@ -80,7 +80,7 @@ dvc dag
 
 	
 ## 3. Create ECR repo to store/save docker image
-    - Save the URI: 376129861991.dkr.ecr.ap-southeast-2.amazonaws.com/brain
+    - Save the URI: ""
 
 	
 ## 4. Create EC2 machine (Ubuntu) 
